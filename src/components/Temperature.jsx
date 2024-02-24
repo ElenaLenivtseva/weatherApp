@@ -1,11 +1,12 @@
 import React from "react";
 
-function Temperature({ setCity, stats }) {
+function Temperature({ setCity, stats, handleSubmit }) {
   const handleCityChange = (e) => {
     setCity(e.target.value);
   };
   return (
     <>
+    <form onSubmit={(e)=>handleSubmit(e)}>
       <div className="flex align-middle justify-center">
         <input
           type="text"
@@ -15,7 +16,7 @@ function Temperature({ setCity, stats }) {
           defaultValue="New Delhi"
         />
         <div className="m-4">
-          <svg
+          {/* <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
@@ -33,9 +34,11 @@ function Temperature({ setCity, stats }) {
               strokeLinejoin="round"
               d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"
             />
-          </svg>
+          </svg> */}
+          <button type="submit" className="bg-slate-200 border-none p-1 rounded hover:opacity-70 easy-in-out">Search</button>
         </div>
       </div>
+      </form>
 
       <div className="flex justify-center">
         {stats.isDay !== 0 ? (
