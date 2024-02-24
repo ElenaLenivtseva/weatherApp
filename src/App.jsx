@@ -6,8 +6,9 @@ import Temperature from "./components/Temperature";
 function App() {
   const [city, setCity] = useState("New Delphi");
   const [weatherData, setWeatherData] = useState(null);
-  useEffect(
-    (apiUrl) => {
+
+    useEffect(() => {
+      const apiUrl = `https://api.weatherapi.com/v1/current.json?key=59b6495858034637afd60555242402&q=${city}&aqi=no`;
       fetch(apiUrl)
         .then((response) => {
           if (!response.ok) {
@@ -24,7 +25,7 @@ function App() {
     [city]
   );
 
-  const apiUrl = `https://api.weatherapi.com/v1/current.json?key=59b6495858034637afd60555242402&q=${city}&aqi=no`;
+  
 
   return (
     <div className="bg-[#1F213A] h-screen flex justify-center align-top">
