@@ -29,7 +29,13 @@ function App() {
   return (
     <div className="bg-[#1F213A] h-screen flex justify-center align-top">
       <div className="mt-40 w-1/5 h-1/3">
-        <Temperature setCity={setCity}/>
+        <Temperature setCity={setCity} stats={{
+          temp: weatherData.current.temp_c,
+          condition: weatherData.current.condition.text,
+          idDay: weatherData.current.is_day,
+          location: weatherData.location.name,
+          time: weatherData.location.localtime,
+          }}/>
       </div>
 
       <div className="mt-40 w-1/3 h-1/3 p-10 grid grid-cols-2 gap-6 ">
