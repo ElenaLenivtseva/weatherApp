@@ -1,8 +1,8 @@
 import React from "react";
 
-const Temperature = () => {
+const Temperature = ({setCity}) => {
   const handleChange = (e) => {
-    console.log(e.target.value);
+    setCity(e.target.value)
   };
   return (
     <>
@@ -12,7 +12,7 @@ const Temperature = () => {
           className="bg-slate-600 border border-slate-500 text-slate-200 placeholder-slate-400 text-md w-60 p-2 focus:outline-none focus:border-slate-400"
           placeholder="Enter Your City Name"
           onChange={handleChange}
-          
+          defaultValue='New Delphi'
         />
         <div className="flex justify-center mt-8">
         {/* <svg
