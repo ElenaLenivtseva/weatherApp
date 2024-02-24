@@ -8,7 +8,7 @@ const Highlights = () => {
         <span className="text-4xl font-bold">2.2</span>
         <span className="text-2xl">mph</span>
       </div>
-      <div className="mt-2 flex ">
+      {/* <div className="mt-2 flex ">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -24,6 +24,13 @@ const Highlights = () => {
           />
         </svg>
         <div className="ms-2 text-slate-200">E</div>
+      </div> */}
+
+      <div className="w-full mt-4 bg-gray-200 rounded-full h-1.5 mb-4 dark:bg-gray-700">
+        <div
+          className="bg-blue-600 h-1.5 rounded-full dark:bg-blue-500"
+          style={{ width: "45%" }}
+        ></div>
       </div>
     </div>
   );
